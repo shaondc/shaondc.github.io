@@ -1,28 +1,26 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const socialLinks = document.querySelectorAll(".social-links a");
-    const projects = document.querySelectorAll(".projects li");
-    const themeToggle = document.getElementById("theme-toggle");
-    const body = document.body;
-    
-    socialLinks.forEach(link => {
-        link.addEventListener("mouseover", function () {
-            this.style.transform = "scale(1.2)";
-            this.style.color = "#ff4500";
-        });
-        
-        link.addEventListener("mouseout", function () {
-            this.style.transform = "scale(1)";
-            this.style.color = "#ffffff";
-        });
+// Smooth scrolling for navigation links
+const navLinks = document.querySelectorAll('nav a');
+navLinks.forEach(link => {
+    link.addEventListener('click', e => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        targetSection.scrollIntoView({ behavior: 'smooth' });
     });
+});
 
-    projects.forEach(project => {
-        project.addEventListener("click", function () {
-            alert("Explore more about: " + this.textContent);
-        });
-    });
+// Scroll to About section when "Learn More" button is clicked
+document.getElementById('scrollToAbout').addEventListener('click', () => {
+    document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+});
 
-    themeToggle.addEventListener("click", function () {
-        body.classList.toggle("dark-mode");
-    });
+// Read More button functionality
+function readMore() {
+    alert("Redirecting to the full blog post...");
+}
+
+// Form submission handler
+document.getElementById('contactForm').addEventListener('submit', e => {
+    e.preventDefault();
+    alert("Thank you for your message! I'll get back to you soon.");
 });

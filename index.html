@@ -3,37 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Awesome Web Page</title>
+    <title>My Vibrant Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header Section -->
     <header>
-        <h1>Welcome to My Colorful Portfolio</h1>
-    </header>
-    
-    <div class="container">
-        <img src="profile.jpg" alt="Profile Picture">
-        <p>Hi, I'm an aspiring web developer exploring GitHub Pages!</p>
-        
-        <div class="social-links">
-            <h3>Connect with me:</h3>
-            <a href="#">GitHub</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Twitter</a>
-        </div>
-        
-        <div class="projects">
-            <h3>My Projects:</h3>
+        <nav>
             <ul>
-                <li>Interactive Web Design</li>
-                <li>JavaScript Games</li>
-                <li>Data Visualization with D3.js</li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Explore my creative world of vibrant designs and interactive projects.</p>
+        <button id="scrollToAbout">Learn More</button>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm a passionate designer and developer who loves creating modern, colorful, and engaging web experiences.</p>
+        <img src="profile.jpg" alt="Profile Image">
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>My Skills</h2>
+        <div class="skill">
+            <h3>HTML & CSS</h3>
+            <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
         </div>
-        
-        <button id="theme-toggle">Toggle Dark Mode</button>
-    </div>
-    
+        <div class="skill">
+            <h3>JavaScript</h3>
+            <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+        </div>
+        <div class="skill">
+            <h3>React & Node.js</h3>
+            <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project">
+            <img src="project1.jpg" alt="Project 1">
+            <h3>Project One</h3>
+            <p>A description of an amazing project.</p>
+        </div>
+        <div class="project">
+            <img src="project2.jpg" alt="Project 2">
+            <h3>Project Two</h3>
+            <p>Another fantastic project description.</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <h2>Testimonials</h2>
+        <blockquote>"Amazing work! Truly impressed by the creativity and professionalism."</blockquote>
+        <cite>- Client Name</cite>
+
+        <blockquote>"A pleasure to work with. Highly recommend for innovative designs."</blockquote>
+        <cite>- Another Client Name</cite>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog">
+        <h2>Latest Blog Posts</h2>
+        <article class="blog-post">
+            <h3>How to Build a Stunning Portfolio Website</h3>
+            <p>A step-by-step guide to creating a modern portfolio website.</p>
+            <button onclick="readMore()">Read More</button>
+        </article>
+
+        <article class="blog-post">
+            <h3>The Importance of Web Design in Branding</h3>
+            <p>Discover how web design impacts your brand identity.</p>
+            <button onclick="readMore()">Read More</button>
+        </article>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        &copy; 2025 My Portfolio. All rights reserved.
+    </footer>
+
+    <!-- JavaScript File -->
     <script src="script.js"></script>
 </body>
 </html>
