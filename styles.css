@@ -1,44 +1,59 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     text-align: center;
-    background-color: #f4f4f4;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
     margin: 0;
     padding: 0;
+    transition: background 0.5s;
 }
 
 header {
     background: #333;
     color: white;
     padding: 20px;
-    font-size: 1.5em;
+    font-size: 1.8em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .container {
     margin: 20px auto;
     padding: 20px;
     background: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
     border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.02);
 }
 
 img {
     width: 150px;
     border-radius: 50%;
     margin-top: 10px;
+    border: 5px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .social-links a {
     display: inline-block;
     margin: 10px;
     text-decoration: none;
-    color: #333;
+    color: #ffffff;
     font-size: 20px;
     font-weight: bold;
+    padding: 10px 15px;
+    background: #333;
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
 
 .social-links a:hover {
-    color: #0073e6;
+    background: #ff4500;
+    color: white;
+    transform: scale(1.1);
 }
 
 .projects {
@@ -55,8 +70,36 @@ img {
 }
 
 .projects li {
-    background: #e0e0e0;
+    background: #ffcccb;
     margin: 5px;
     padding: 10px;
     border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.projects li:hover {
+    background: #ff7e5f;
+    color: white;
+}
+
+#theme-toggle {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background: #222;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#theme-toggle:hover {
+    background: #444;
+}
+
+.dark-mode {
+    background: linear-gradient(to right, #141e30, #243b55);
+    color: white;
 }
